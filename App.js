@@ -2,15 +2,18 @@ import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 
 export default function App() {
+
+  const showData = () => {
+    alert("Hello")
+  }
+
   return (
     <View style={styles.container}>
       <Text>Button Example</Text>
       <Button
         title='click me'
         color='purple'
-        style={{
-          
-        }}
+        onPress={showData}
       />
     </View>
   )
