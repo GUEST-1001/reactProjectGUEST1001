@@ -4,24 +4,35 @@ import React,{useState} from 'react'
 
 const UserNamePassword = () => {
 
-    const [eMail, setEMail] = useState('')
-    const [password, setEPassword] = useState('')
+    const [textInputEmail, setTextInputEmail] = useState('')
+    const [textInputName, setTextInputName] = useState('')
 
     const checkTextInput = () => {
-        alert("email: " + eMail + "\n" + "password: " + password)
+        if(!textInputName.trim()) {
+            alert('Please Enter Name');
+            return;
+        }
+        if(!textInputEmail.trim()) {
+            alert('Please Enter Email');
+            return;
+        }
+        else {
+            alert('Success');
+            return;
+        }
       }
 
 
   return (
     <View style={styles.container}>
         <TextInput
-            style={styles.input}
-            placeholder='Email'
-            onChangeText = {(eMail) => (setEMail(eMail))}/>
+            style={styles.textInputStyle}
+            placeholder='Name'
+            onChangeText = {(name) => (setTextInputName(name))}/>
         <TextInput
-            style={styles.input}
-            placeholder='Password'
-            onChangeText = {(password) => (setEPassword(password))}/>
+            style={styles.textInputStyle}
+            placeholder='Email'
+            onChangeText = {(email) => (setTextInputEmail(email))}/>
         <Button
             color='#7a42f4'
             title="submit"
@@ -36,24 +47,16 @@ export default UserNamePassword
 
 const styles = StyleSheet.create({
     container: {
-      paddingTop: 23,
+      flex: 1,
+      padding: 35,
       },
 
-    input: {
-        margin: 15,
+    textInputStyle: {
+        width: '100%',
+        marginTop: 15,
         height: 40,
-        borderColor: '#7a42f4',
-        borderWidth: 1,
+        paddingHorizontal: 5,
+        borderWidth: 0.5,
       },
 
-    submitButton: {
-        backgroundColor: '#7a42f4',
-        padding: 10,
-        margin: 15,
-        height: 40,
-      },
-
-    submitButtonText: {
-        color: 'white',
-      },
 })
