@@ -1,10 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
-const Separator = () => (
-    <View style={styles.buttonIconSeparatorStyle}/>
-)
-
 const TouchablePractice = () => {
   return (
     <View style={styles.container}>
@@ -14,7 +10,7 @@ const TouchablePractice = () => {
                 style={styles.buttonImageIconStyle}
             />
 
-            <Separator/>
+            <View style={styles.buttonIconSeparatorStyle}/>
             
             <TouchableOpacity>
                 <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
@@ -26,8 +22,8 @@ const TouchablePractice = () => {
                 source={require('../assets/google-plus.png')}
                 style={styles.buttonImageIconStyle}
             />
-            
-            <Separator/>
+
+            <View style={styles.buttonIconSeparatorStyle}/>
             
             <TouchableOpacity>
                 <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
