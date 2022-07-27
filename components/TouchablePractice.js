@@ -4,31 +4,32 @@ import React from 'react'
 const TouchablePractice = () => {
   return (
     <View style={styles.container}>
-        <View style={styles.buttonFacebookStyle}>
-            <Image
-                source={require('../assets/facebook.png')}
-                style={styles.buttonImageIconStyle}
-            />
-
-            <View style={styles.buttonIconSeparatorStyle}/>
             
-            <TouchableOpacity>
-                <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
+            <TouchableOpacity activeOpacity={0.5}>
+                <View style={styles.buttonFacebookStyle}>
+                    <Image
+                        source={require('../assets/facebook.png')}
+                        style={styles.buttonImageIconStyle}
+                    />
+
+                    <View style={styles.buttonIconSeparatorStyle}/>
+
+                    <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
+                </View>
             </TouchableOpacity>
-        </View>
-
-        <View style={styles.buttonGPlusStyle}>
-            <Image
-                source={require('../assets/google-plus.png')}
-                style={styles.buttonImageIconStyle}
-            />
-
-            <View style={styles.buttonIconSeparatorStyle}/>
             
-            <TouchableOpacity>
-                <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
+            <TouchableOpacity activeOpacity={0.5}>
+                <View style={styles.buttonGPlusStyle}>
+                    <Image
+                        source={require('../assets/google-plus.png')}
+                        style={styles.buttonImageIconStyle}
+                    />
+
+                    <View style={styles.buttonIconSeparatorStyle}/>
+
+                    <Text style={styles.buttonTextStyle}>Login Using Facebook</Text>
+                </View>
             </TouchableOpacity>
-        </View>
 
     </View>
   )
