@@ -6,11 +6,14 @@ import React from 'react'
 import ButtonExample from './components/ButtonExample'
 import TouchableEx from './components/TouchableEx'
 import TouchablePractice from './components/TouchablePractice'
+import DynamicStyle from './components/DynamicStyle'
+import ModelExample from './components/ModelExample'
+import ModalPractice from './components/ModalPractice'
 
 const App = () => {
   return (
     <View style={{flex:1}}>
-      <TouchablePractice/>
+      <ModalPractice/>
     </View>
   )
 }
