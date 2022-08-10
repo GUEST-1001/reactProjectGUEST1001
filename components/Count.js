@@ -1,18 +1,25 @@
-import { View, Text, Button } from 'react-native'
-import React ,{useState } from 'react'
+import { View, Text, Button } from "react-native";
+import React, { useState, useEffect } from "react";
 
 const Count = () => {
+  const [count, setCount] = useState(0);
 
-    const [count, setCount] = useState(0);
+  useEffect(() => {
+    console.log("Use Effect 1");
+  });
+  useEffect(() => {
+    console.log("Use Effect 2");
+  }, [count]);
+  useEffect(() => {
+    console.log("Use Effect 3");
+  }, []);
 
   return (
-    <View style={{alignItems:'center'}}>
+    <View style={{ alignItems: "center" }}>
       <Text>{count}</Text>
-      <Button 
-      title="Click ME!!!"
-      onPress={() => setCount(count+1)}/>
+      <Button title="Click ME!!!" onPress={() => setCount(count + 1)} />
     </View>
-  )
-}
+  );
+};
 
-export default Count
+export default Count;
